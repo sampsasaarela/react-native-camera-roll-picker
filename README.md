@@ -42,6 +42,8 @@ import CameraRollPicker from 'react-native-camera-roll-picker';
 - `emptyText`: Text to display instead of a list when there are no photos found. (Default: 'No photos.')
 - `emptyTextStyle`: Styles to apply to the `emptyText`. (Default: `textAlign: 'center'`)
 - `loadSize`: How many assets are loaded at once. (Default: `loadSize: 1000`)
+- `emptyState`: Add custom component to shown instead of just text. (Default: `emptyState: null`, Usage: ``<CameraRollPicker
+  emptyState={(<MyCustomComponent />)} />``). If set, `emptyText` property is ignored.
 
 ##Run Example
 ```
