@@ -45,6 +45,21 @@ import CameraRollPicker from 'react-native-camera-roll-picker';
 - `emptyState`: Add custom component to shown instead of just text. (Default: `emptyState: null`, Usage: ``<CameraRollPicker
   emptyState={(<MyCustomComponent />)} />``). If set, `emptyText` property is ignored.
 
+##Methods
+Use a component ref to use these methods.
+
+Example:
+```
+<CameraRollPicker
+  callback={this.getSelectedImages}
+  ref={ref => this._cameraRollPicker = ref}
+/>
+
+Then call a method like this: this._cameraRollPicker.refresh()
+```
+
+- `refresh()` : Force a reload of all media from the CameraRoll.
+
 ##Run Example
 ```
 $ git clone https://github.com/jeanpan/react-native-camera-roll-picker.git
